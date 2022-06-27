@@ -1,0 +1,10 @@
+cd src/java
+javah  com.server.mediamanager.HelloWorld
+gcc -shared -Wall -Werror -I/home/graalvm-ce-java11-22.1.0/include -I/home/graalvm-ce-java11-22.1.0/include/linux -o libHelloWorld.so -fPIC ./HelloWorld.c
+
+cp libHelloWorld.so /home/native/spring-native-call-jni-demo/
+
+mvn -Pnative -DskipTests clean  package
+
+cp libHelloWorld.so target/
+LD_LIBRARY_PATH=./ ./mediamanager

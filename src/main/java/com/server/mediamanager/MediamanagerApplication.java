@@ -1,5 +1,6 @@
 package com.server.mediamanager;
 
+import com.sun.jna.Native;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,6 +28,7 @@ public class MediamanagerApplication {
 			log.info("Media Manager Service starting.");
 			log.info("Media Manager Service starting===" + System.getProperty("java.library.path"));
 			ConfigurableApplicationContext mContext = SpringApplication.run(MediamanagerApplication.class, args);
+
 			new HelloWorld().print();
 		}catch (Exception e) {
 			log.error("start MediamanagerApplication error", e);
