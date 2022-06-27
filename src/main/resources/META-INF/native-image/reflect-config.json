@@ -1,0 +1,10 @@
+[
+  {
+    "name": "com.server.mediamanager.data.MediaServiceInfo",
+    "allDeclaredFields": true,
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredClasses": true
+  }
+]
